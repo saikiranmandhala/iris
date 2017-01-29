@@ -1,0 +1,23 @@
+{
+  "name": "CustomComponent",
+  "version": "0.0.1",
+  "dependencies": {
+    "@angular/common": "^2.4.4",
+    "@angular/compiler": "^2.4.4",
+    "@angular/core": "^2.4.4",
+    "@angular/forms": "^2.4.4",
+    "@angular/http": "^2.4.4",
+    "@angular/platform-browser": "^2.4.4",
+    "@angular/platform-browser-dynamic": "^2.4.4",
+    "@angular/router": "^3.4.4",
+    "@types/core-js": "^0.9.35",
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.4.1",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.1.1",
+    "reflect-metadata": "^0.1.9",
+    "rxjs": "^5.0.3",
+    "systemjs": "^0.19.42",
+    "zone.js": "^0.7.6"
+  }
+}

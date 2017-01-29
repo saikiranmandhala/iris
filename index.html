@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="./">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <script src="node_modules/core-js/client/shim.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="system.config.js"></script>
+    <!--<script src="node_modules/jquery/dist/jquery.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/core.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log('jQuery DOM ready.');
+            $(".dropdown-toggle").dropdown();
+        }); 
+    </script>
+</head>
+
+<body class="container">
+
+    <my-app>
+        Loading...
+    </my-app>
+</body>
+
+</html>

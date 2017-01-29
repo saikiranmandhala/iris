@@ -12,6 +12,8 @@ var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
 var button_component_1 = require("./ButtonComponent/button.component");
 var volatileConstants_sevice_1 = require("./services/volatileConstants.sevice");
+var irisLogger_service_1 = require("./irisLogger.service");
+var irisErrorHandler_service_1 = require("./irisErrorHandler.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,7 +26,23 @@ AppModule = __decorate([
             button_component_1.ButtonComponent
         ],
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
-        providers: [volatileConstants_sevice_1.VolatileConstants],
+        providers: [volatileConstants_sevice_1.VolatileConstants,
+            irisLogger_service_1.IRISLogger,
+            // CAUTION: This providers collection overrides the CORE ErrorHandler with our
+            // custom version of the service that logs errors to the IRISLogger.
+            irisErrorHandler_service_1.LOGGING_ERROR_HANDLER_PROVIDERS,
+            // OPTIONAL: By default, our custom LoggingErrorHandler has behavior around
+            // rethrowing and / or unwrapping errors. In order to facilitate dependency-
+            // injection instead of resorting to the use of a Factory for instantiation,
+            // these options can be overridden in the providers collection.
+            {
+                provide: irisErrorHandler_service_1.LOGGING_ERROR_HANDLER_OPTIONS,
+                useValue: {
+                    rethrowError: false,
+                    unwrapError: false
+                }
+            }
+        ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

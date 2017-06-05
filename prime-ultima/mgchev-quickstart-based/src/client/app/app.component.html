@@ -1,0 +1,27 @@
+<div class="layout-wrapper layout-compact" [ngClass]="layout-compact">
+
+    <div #layoutContainer class="layout-container menu-layout-static menu-layout-horizontal" 
+            [ngClass]="menu-layout-horizontal">
+
+        <app-topbar></app-topbar>
+
+        <div [ngClass]="{'layout-menu':true,'layout-menu-dark':false}" (click)="onMenuClick($event)">
+            <div #layoutMenuScroller class="nano">
+                <div class="nano-content menu-scroll-content">
+                  <!--Sai Commented-->
+                    <!--<inline-profile *ngIf="profileMode=='inline'&&!isHorizontal()"></inline-profile>-->
+                    <app-menu [reset]="resetMenu"></app-menu>
+                </div>
+            </div>
+        </div>
+        
+        <div class="layout-main">
+            <router-outlet></router-outlet>
+            
+            <!--<app-footer></app-footer>-->
+            <br>
+            <h4>Footer</h4>
+        </div>
+    </div>
+
+</div>

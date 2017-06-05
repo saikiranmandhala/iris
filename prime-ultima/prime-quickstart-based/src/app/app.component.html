@@ -1,0 +1,68 @@
+<div class="layout-wrapper layout-compact" [ngClass]="layout-compact">
+
+    <div #layoutContainer class="layout-container menu-layout-static menu-layout-horizontal" 
+            [ngClass]="menu-layout-horizontal">
+
+        <app-topbar></app-topbar>
+
+        <div [ngClass]="{'layout-menu':true,'layout-menu-dark':false}" (click)="onMenuClick($event)">
+            <div #layoutMenuScroller class="nano">
+                <div class="nano-content menu-scroll-content">
+                  <!--Sai Commented-->
+                    <!--<inline-profile *ngIf="profileMode=='inline'&&!isHorizontal()"></inline-profile>-->
+                    <app-menu [reset]="resetMenu"></app-menu>
+                </div>
+            </div>
+        </div>
+        
+        <div class="layout-main">
+            <router-outlet></router-outlet>
+            <div class="ui-g ui-fluid">
+  <div class="ui-g-12 ui-lg-6">
+    <div class="card card-w-title">
+      <h1>InputText</h1>
+      <div class="ui-g form-group">
+        <div class="ui-g-12 ui-md-4">
+          <span class="md-inputfield">
+                        <input pinputtext="" type="text" class="ui-inputtext ui-corner-all ui-state-default ui-widget">
+                        <label>Name</label>
+                    </span>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <span class="md-inputfield">
+                        <input pinputtext="" type="text" class="ui-inputtext ui-corner-all ui-state-default ui-widget">
+                        <label>Email</label>
+                    </span>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <span class="md-inputfield">
+                        <input pinputtext="" type="text" class="ui-inputtext ui-corner-all ui-state-default ui-widget">
+                        <label>Phone</label>
+                    </span>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <input disabled="disabled" pinputtext="" placeholder="Disabled" type="text" class="ui-inputtext ui-corner-all ui-state-default ui-widget">
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <span class="md-inputfield">
+                        <input class="ng-dirty ng-invalid ui-inputtext ui-corner-all ui-state-default ui-widget" pinputtext="" placeholder="Invalid" type="text">
+                        <div class="ui-message ui-messages-error ui-corner-all">
+                            This field is required
+                        </div>
+                    </span>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <input pinputtext="" type="text" class="ui-inputtext ui-corner-all ui-state-default ui-widget">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+            <!--<app-footer></app-footer>-->
+            <br>
+            <h4>Footer</h4>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,6 @@
+https://github.com/vrmerlin?tab=following
+https://github.com/primefaces/primeng/issues/2347
+https://github.com/danielsz/om-pageslider/tree/master/resources/fonts/roboto-v15-latin
+https://forum.primefaces.org/viewtopic.php?t=49856
+https://www.primefaces.org/ultima-ng/assets/layout/fonts/
+https://stackoverflow.com/questions/35837279/angular-2-custom-directive-oninit
